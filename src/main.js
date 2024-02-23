@@ -4,23 +4,23 @@ import { getAuth, onAuthStateChanged, signInAnonymously } from "firebase/auth";
 
 
 const auth = getAuth(app);
-auth.signInAnonymously()
+signInAnonymously(auth)
     .then(() => {
         console.log('success');
     })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode,errorMessage);
+        console.log(errorCode, errorMessage);
     });
 
 
-    auth.onAuthStateChanged((user) => {
-        console.log(user)
-        if (user) {
-            // You're logged in
-        }
-        else{
-            //You're logged out
-        }
-    })
+onAuthStateChanged(auth, (user) => {
+    console.log(user)
+    if (user) {
+        // You're logged in
+    }
+    else {
+        //You're logged out
+    }
+})
