@@ -1,7 +1,12 @@
 import './style.css'
-import { app } from './firebase'
+import { app,db } from './firebase'
 import { getAuth, onAuthStateChanged, signInAnonymously } from "firebase/auth";
+import getRandomFruitsName from 'random-fruits-name'
+import { onChildAdded, push, ref, set } from 'firebase/database';
 
+const name = getRandomFruitsName();
+let playerId;
+let playerRef;
 
 const auth = getAuth(app);
 signInAnonymously(auth)
@@ -18,7 +23,19 @@ signInAnonymously(auth)
 onAuthStateChanged(auth, (user) => {
     console.log(user)
     if (user) {
-        // You're logged in
+        playerId = user.uid
+        playerRef = ref(db,'players/'+playerId)
+        playerRef = push(playerRef);
+
+        set(playerRef, {
+            id: playerId,
+            name: name,
+            cards:null
+        });
+
+        onChildAdded(playerRef, (data) => {
+            console.log(data);
+        });
     }
     else {
         //You're logged out
