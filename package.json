@@ -4,7 +4,8 @@
   "description": "Cards Against Humanity Game Created With VanillaJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs/issues"
   },
-  "homepage": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs#readme"
+  "homepage": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs#readme",
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
 }
