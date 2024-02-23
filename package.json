@@ -1,12 +1,9 @@
 {
   "name": "cards-against-humanity-game-firebase-vanillajs",
   "version": "0.0.1",
+  "private": true,
   "description": "Cards Against Humanity Game Created With VanillaJS",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "dev-server": "webpack-dev-server"
-  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs.git"
@@ -23,13 +20,12 @@
     "url": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs/issues"
   },
   "homepage": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^6.10.0",
-    "style-loader": "^3.3.4",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "vite": "^5.1.4"
   }
 }
