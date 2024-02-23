@@ -1,0 +1,25 @@
+{
+  "name": "cards-against-humanity-game-firebase-vanillajs",
+  "version": "0.0.1",
+  "description": "Cards Against Humanity Game Created With VanillaJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs.git"
+  },
+  "keywords": [
+    "cah",
+    "cards-against-humanity",
+    "game",
+    "vanillajs"
+  ],
+  "author": "Masih Gh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs/issues"
+  },
+  "homepage": "https://github.com/masihgh/cards-against-humanity-game-firebase-vanillajs#readme"
+}
